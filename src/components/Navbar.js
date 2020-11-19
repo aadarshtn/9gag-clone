@@ -1,6 +1,21 @@
 import React, { Component } from "react";
+import { switchTheme } from '../actions/9gag';
 
 class Navbar extends Component {
+  constructor(props) {
+    super(props);
+    this.dark = false;
+  }
+  
+  switchToDark = (val) => {
+    if(!this.dark){
+      this.props.dispatch(switchTheme(val));
+      this.dark = true;
+    }else{
+      this.props.dispatch(switchTheme(!val));
+      this.dark = false;
+    }
+  }
   render() {
     return (
       <div className="navbar">
@@ -38,7 +53,7 @@ class Navbar extends Component {
           </a>
         </div>
         <div className="nav-wrap-right">
-            <a className="night-mode-icon"></a>
+            <a className={this.dark ? "night-mode-inactive-icon" : "night-mode-active-icon"} onClick={() => {this.switchToDark(true)}}></a>
             <a className="search-icon"></a>
           <a href="/" className="control">
             Log in
