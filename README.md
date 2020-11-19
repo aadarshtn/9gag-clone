@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+###  PROCEDURES TO RUN THIS PROJECT IN YOUR LOCAL MACHINE ###
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. CREATE A BASE (REACT) APP IN YOUR LOCAL MACHINE BY :
+    STEPS : 
+    1.1 OPEN CMD/Powershell/....etc...
+    1.2 Run "create-react-app 9gag-clone" inside any local directory of your choice.
+    1.3 Go To "" and download the project codebase from github.
+    1.4 (Once Step 1.2 Is Finished) Copy all the files and folders from the downloaded project directory to the root folder created by "create-react-app" [NOTE: OVERWRITE ALL WHEN PROMPTED].
+    1.5 Open this root folder in any code editor(Visual Studio Code Preferred!)
+    1.6 In the terminal window(at project root directory) run all the following commands:
+        "npm install react-redux"
+        "npm install redux"
+        "npm install redux-logger"
+        "npm install redux-thunk"
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+2. SET UP THE SUPPORT SERVER :
+        [NOTE ::: This Server is being set up inorder to tackle the 
+        cors policy errors that may occur in browsers, because of 
+        cross-server fetching of data , that is here we are fetching 
+        data from 9gag.com]
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    STEPS : 
+    2.1 Open a new code editor window(Visual Studio Code Preferred!)
+    2.2 Open the powershell/cmd terminal of the code editor and browse to an appropriate directory outide the root directory of react app.
+    2.3 run "npm init" in the terminal(give all the asked properties the default values while initialisation).
+    2.4 Go To "" and download the cors-server codebase from github.
+    2.5 Copy all the files and folders from the downloaded project directory to the directory in which server is initialized.
+    2.6 In the terminal window(at cors-server root directory) run all the following commands:
+        "npm install express"
+        "npm install request"
+        "npm install -g corsproxy"
+        "corsproxy"
+        "npm install node-fetch"
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. RUN THE SERVERS 
+    STEPS: 
+    3.1 Run "npm start" in the terminal window of the code editor where cors-server is opened. [FIRST]
+    3.2 Run "npm start" in the terminal window of the code editor where 9gag-clone is opened. [SECOND]
 
-### `npm run build`
+    [NOTE ::: Make sure to follw the order of firing the servers as mentioned above]
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. VISIT THE CLONED 9GAG PAGE
+    goto - http://localhost:3000/ from any browser to view!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### 
